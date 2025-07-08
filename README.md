@@ -6,10 +6,7 @@ affiliation: "University of California Davis"
 email: bgavett@health.ucdavis.edu
 date: "2025-07-25"
 format:
-  pdf:
-    include-in-header: preamble.tex
-    code-block-bg: true
-    code-overflow: wrap
+  html:
     keep-md: true
 ---
 
@@ -306,7 +303,7 @@ hist(mem_resid)
 ```
 
 ::: {.cell-output-display}
-![](rri-handout_files/figure-pdf/lm r-1.pdf){fig-pos='H'}
+![](rri-handout-html_files/figure-html/lm r-1.png){width=768}
 :::
 :::
 
@@ -883,7 +880,7 @@ hist(memr_fscores)
 ```
 
 ::: {.cell-output-display}
-![](rri-handout_files/figure-pdf/sem r-1.pdf){fig-pos='H'}
+![](rri-handout-html_files/figure-html/sem r-1.png){width=768}
 :::
 :::
 
@@ -948,7 +945,7 @@ ggplot(adni_syn_resid, aes(x = memr_lm, y = memr_sem)) +
 ```
 
 ::: {.cell-output-display}
-![](rri-handout_files/figure-pdf/compare-1.pdf){fig-pos='H'}
+![](rri-handout-html_files/figure-html/compare-1.png){width=768}
 :::
 :::
 
@@ -999,7 +996,7 @@ adni_syn_resid %>%
 ```
 
 ::: {.cell-output-display}
-![](rri-handout_files/figure-pdf/ba-1.pdf){fig-pos='H'}
+![](rri-handout-html_files/figure-html/ba-1.png){width=768}
 :::
 :::
 
@@ -1086,7 +1083,7 @@ interact_plot(ef_memr_sem, pred = FDG, modx = memr_sem)
 ```
 
 ::: {.cell-output-display}
-![](rri-handout_files/figure-pdf/valid2-1.pdf){fig-pos='H'}
+![](rri-handout-html_files/figure-html/valid2-1.png){width=768}
 :::
 :::
 
