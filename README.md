@@ -1,7 +1,10 @@
 AAIC25 - Cognitive Resilience in Alzheimer’s Disease: Concepts,
 Statistical Tools and Policy Shaping
 ================
-Brandon Gavett, Ph.D.
+Brandon Gavett, Ph.D.  
+Department of Neurology, University of California Davis  
+<bgavett@health.ucdavis.edu>
+
 2025-07-25
 
 ## Building a Residual
