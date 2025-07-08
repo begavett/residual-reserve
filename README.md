@@ -154,8 +154,8 @@ mem_lm <- lm(ADNI_MEM_st ~ age_70 + edu_12 + female + aa + hisp +
              na.action = "na.exclude")
 ```
 
-The argument `na.action = "na.exclude"` is helpful because it will not
-produce missing data errors when merging the residuals back in with our
+The argument `na.action = "na.exclude"` is helpful because it will
+prevent missing data errors when merging the residuals back in with our
 original data stored in `adni_syn`.
 
 ## Linear Regression Approach
@@ -203,6 +203,9 @@ summary(mem_lm)
 Obtaining residuals from a linear model (`lm`) simply requires a call to
 the `resid` function.
 
+Here, we store the residuals in an object called `mem_resid` and then
+visualize the residuals’ distribution using a histogram.
+
 ``` r
 mem_resid <- resid(mem_lm)
 
@@ -216,7 +219,7 @@ hist(mem_resid)
 ### Saving the residual
 
 Here, we create a new object called `adni_syn_resid`. To create this
-object, we begin with the original data (`adni_syn`) and apply a
+object, we begin with the original data frame (`adni_syn`) and apply a
 mutation, adding a new column that contains the residuals we had
 previously stored in the `mem_resid` object.
 
