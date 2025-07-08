@@ -70,8 +70,7 @@ pacman::p_load(dplyr, magrittr, ggplot2, psych, lavaan, interactions)
 ## Import Data
 
 ``` r
-adni_syn <- readRDS(url("https://github.com/begavett/residual-reserve/raw/refs/
-                        heads/main/Data/adni_dat_syn_rc.Rds"))
+adni_syn <- readRDS(url("https://github.com/begavett/residual-reserve/raw/refs/heads/main/Data/adni_dat_syn_rc.Rds"))
 ```
 
 ## Examine Data
