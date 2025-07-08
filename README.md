@@ -680,6 +680,10 @@ adni_syn_resid %>%
 
 ![](README_files/figure-gfm/ba-1.png)<!-- -->
 
+## Validation
+
+### Do our measures of CR moderate cross-sectional brain effects on cognition?
+
 Hypothesized model:
 
 - Outcome: `ADNI_EF_st` - [(Gibbons et al.,
