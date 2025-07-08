@@ -154,6 +154,10 @@ mem_lm <- lm(ADNI_MEM_st ~ age_70 + edu_12 + female + aa + hisp +
              na.action = "na.exclude")
 ```
 
+The argument `na.action = "na.exclude"` is helpful because it will not
+produce missing data errors when merging the residuals back in with our
+original data stored in `adni_syn`.
+
 ## Linear Regression Approach
 
 ### Summary
