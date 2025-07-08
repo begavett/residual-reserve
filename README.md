@@ -2,8 +2,7 @@ AAIC25 - Cognitive Resilience in Alzheimer’s Disease: Concepts,
 Statistical Tools and Policy Shaping
 ================
 Brandon Gavett, Ph.D.  
-Department of Neurology, University of California Davis  
-<bgavett@health.ucdavis.edu>
+Department of Neurology, University of California Davis
 
 2025-07-25
 
@@ -880,5 +879,3 @@ interact_plot(ef_memr_sem, pred = FDG, modx = memr_sem)
 
 Materials are available at
 <https://github.com/begavett/residual-reserve>
-
-Contact information: <bgavett@health.ucdavis.edu>
