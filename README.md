@@ -103,7 +103,7 @@ head(adni_syn)
 
 ### Descriptives
 
-The `describe` function from the `psych` package generate descriptive
+The `describe` function from the `psych` package generates descriptive
 statistics.
 
 ``` r
@@ -272,7 +272,7 @@ model_syntax <- "factor =~ x1 + x2 + x3 + x4"
 ```
 
 The model syntax is then executed by using one of several functions in
-the lavaan package:
+the `lavaan` package:
 
 - `cfa` for models with a measurement component but not a structural
   component
@@ -733,9 +733,8 @@ mindful that this approach does have limitations.
 Factor scores from a `lavaan` model are generated using the `lavPredict`
 function.
 
-The default is to use the `regression` factor scoring method. Use the
-`method = "Bartlett"` argument to use the Bartlett factor scoring method
-(other options available for categorical indicators).
+The default is to use the `regression` factor scoring method. Here, we
+specify `method = "Bartlett"` to use the Bartlett factor scoring method.
 
 ``` r
 model_fscores <- lavPredict(resid_lv_mem_fit, method = "Bartlett")
