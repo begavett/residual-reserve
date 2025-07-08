@@ -636,6 +636,11 @@ head(adni_syn_resid)
     ## 5    -0.254  0.0891      0.0589      0.560 1.31  -0.515 -0.82386
     ## 6    -0.703 -0.7278      0.8372      1.205 1.38  -0.230 -0.00634
 
+Note that some rows have missing values in the `memr_lm` column, but
+non-missing data in the `memr_sem` column. The SEM approach is more
+flexible with missing data handling, and, unlike the `lm` approach, does
+not require complete data to estimate a person’s residual.
+
 ## Comparison of Approaches
 
 ``` r
