@@ -738,8 +738,3 @@ interact_plot(ef_memr_sem, pred = FDG, modx = memr_sem)
 ```
 
 ![](README_files/figure-gfm/valid2-1.png)<!-- -->
-
-## Resources
-
-Materials are available at
-<https://github.com/begavett/residual-reserve>
