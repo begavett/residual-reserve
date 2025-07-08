@@ -686,9 +686,9 @@ adni_syn_resid %>%
 
 Hypothesized model:
 
-- Outcome: `ADNI_EF_st` - [(Gibbons et al.,
-  2012)](https://doi.org/10.1007/s11682-012-9176-1), a composite measure
-  of executive functioning
+- Outcome: `ADNI_EF_st` [(Gibbons et al.,
+  2012)](https://doi.org/10.1007/s11682-012-9176-1) - a composite
+  measure of executive functioning
 - Predictor: `FDG` - FDG-PET metaROI (posterior cingulate, angular
   gyrus, inferior temporal gyrus)
 - Moderator: `memr_sem` - Residual cognitive reserve variable from the
