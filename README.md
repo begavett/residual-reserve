@@ -200,8 +200,8 @@ summary(mem_lm)
 
 ### Extracting the residual
 
-Obtaining residuals from a linear model (`lm`) simply requires a call to
-the `resid` function.
+Obtaining residuals from a linear model (`lm`) object simply requires a
+call to the `resid` function.
 
 Here, we store the residuals in an object called `mem_resid` and then
 visualize the residuals’ distribution using a histogram.
@@ -557,148 +557,6 @@ summary(resid_lv_mem_fit,
     ##     latent_hcv        0.893    0.031   29.105    0.000    1.000    1.000
     ##     latent_wbv        0.443    0.015   30.550    0.000    1.000    1.000
     ##     latent_wmh        0.921    0.038   24.144    0.000    1.000    1.000
-
-``` r
-modindices(resid_lv_mem_fit, sort. = TRUE)
-```
-
-    ##                lhs op            rhs    mi    epc sepc.lv sepc.all sepc.nox
-    ## 183             aa  ~         ICV_st 4.227 -0.059  -0.059   -0.205   -0.205
-    ## 186             aa  ~     latent_wmh 4.126 -0.015  -0.014   -0.053   -0.053
-    ## 98       logWMH_st ~~             aa 2.861 -0.011  -0.011   -0.134   -0.134
-    ## 39      latent_wmh ~~             aa 2.840 -0.011  -0.012   -0.044   -0.044
-    ## 158     latent_wmh  ~             aa 2.840 -0.160  -0.166   -0.044   -0.044
-    ## 199           hisp  ~             aa 2.731 -0.027  -0.027   -0.034   -0.034
-    ## 187             aa  ~         female 2.722  0.076   0.076    0.143    0.143
-    ## 48              aa ~~           hisp 2.701 -0.002  -0.002   -0.034   -0.034
-    ## 189             aa  ~           hisp 2.504 -0.041  -0.041   -0.032   -0.032
-    ## 184             aa  ~     latent_hcv 2.150  0.014   0.013    0.051    0.051
-    ## 154     latent_wmh  ~     latent_hcv 2.017 -0.238  -0.234   -0.234   -0.234
-    ## 76      latent_hcv =~      logWMH_st 2.017 -0.238  -0.225   -0.222   -0.222
-    ## 182             aa  ~    ADNI_MEM_st 1.860  0.019   0.019    0.070    0.070
-    ## 180             aa  ~ Hippocampus_st 1.841  0.013   0.013    0.051    0.051
-    ## 146     latent_wbv  ~         female 1.788  1.256   1.887    0.942    0.942
-    ## 113  WholeBrain_st  ~         female 1.788  1.256   1.256    0.627    0.627
-    ## 185             aa  ~     latent_wbv 1.708  0.011   0.008    0.028    0.028
-    ## 150     latent_wmh  ~ Hippocampus_st 1.670 -0.201  -0.210   -0.212   -0.212
-    ## 89   WholeBrain_st ~~         ICV_st 1.407  0.161   0.161    0.779    0.779
-    ## 178         edu_12  ~             aa 1.352 -0.250  -0.250   -0.024   -0.024
-    ## 45          edu_12 ~~             aa 1.352 -0.017  -0.017   -0.024   -0.024
-    ## 171         edu_12  ~  WholeBrain_st 1.292  0.942   0.942    0.339    0.339
-    ## 111  WholeBrain_st  ~ Hippocampus_st 1.273  0.242   0.242    0.245    0.245
-    ## 148     latent_wbv  ~             aa 1.215  0.060   0.090    0.024    0.024
-    ## 115  WholeBrain_st  ~             aa 1.215  0.060   0.060    0.016    0.016
-    ## 92   WholeBrain_st ~~             aa 1.215  0.004   0.004    0.070    0.070
-    ## 35      latent_wbv ~~             aa 1.211  0.004   0.006    0.023    0.023
-    ## 140     latent_wbv  ~ Hippocampus_st 1.179  0.234   0.351    0.355    0.355
-    ## 160         female  ~ Hippocampus_st 1.164  0.196   0.196    0.398    0.398
-    ## 144     latent_wbv  ~     latent_hcv 1.143  0.230   0.327    0.327    0.327
-    ## 126         ICV_st  ~         female 1.022 -1.329  -1.329   -0.719   -0.719
-    ## 188             aa  ~         edu_12 0.892 -0.002  -0.002   -0.019   -0.019
-    ## 8       latent_wbv ~~         ICV_st 0.748  0.114   0.172    0.186    0.186
-    ## 145     latent_wbv  ~     latent_wmh 0.748  0.558   0.804    0.804    0.804
-    ## 127         ICV_st  ~         edu_12 0.709 -0.060  -0.060   -0.181   -0.181
-    ## 181             aa  ~  WholeBrain_st 0.703  0.006   0.006    0.024    0.024
-    ## 162         female  ~    ADNI_MEM_st 0.686 -0.021  -0.021   -0.041   -0.041
-    ## 7    WholeBrain_st ~~  WholeBrain_st 0.638  2.680   0.050    0.050    0.050
-    ## 105 Hippocampus_st  ~  WholeBrain_st 0.638  4.366   4.366    4.321    4.321
-    ## 26           mem_r ~~         edu_12 0.638  5.418   5.418    1.950    1.950
-    ## 102    ADNI_MEM_st ~~         edu_12 0.638  4.165   4.165    8.652    8.652
-    ## 87   WholeBrain_st ~~      logWMH_st 0.637 -0.842  -0.842  -11.913  -11.913
-    ## 104    ADNI_MEM_st ~~           hisp 0.637 -0.549  -0.549  -15.024  -15.024
-    ## 28           mem_r ~~           hisp 0.637 -0.714  -0.714   -3.386   -3.386
-    ## 135     latent_hcv  ~     latent_wmh 0.637 -0.151  -0.154   -0.154   -0.154
-    ## 138     latent_hcv  ~             aa 0.637  1.329   1.406    0.371    0.371
-    ## 132     latent_hcv  ~    ADNI_MEM_st 0.637  0.104   0.110    0.110    0.110
-    ## 106 Hippocampus_st  ~    ADNI_MEM_st 0.637  0.104   0.104    0.103    0.103
-    ## 133     latent_hcv  ~         ICV_st 0.637 -0.036  -0.039   -0.036   -0.036
-    ## 5       latent_hcv ~~         ICV_st 0.637 -0.031  -0.033   -0.036   -0.036
-    ## 108 Hippocampus_st  ~         edu_12 0.637 -0.122  -0.122   -0.336   -0.336
-    ## 136     latent_hcv  ~         female 0.637  0.127   0.134    0.067    0.067
-    ## 117    ADNI_MEM_st  ~ Hippocampus_st 0.637 -0.120  -0.120   -0.122   -0.122
-    ## 119    ADNI_MEM_st  ~         ICV_st 0.637 -0.020  -0.020   -0.018   -0.018
-    ## 118    ADNI_MEM_st  ~  WholeBrain_st 0.637 -0.025  -0.025   -0.025   -0.025
-    ## 96       logWMH_st ~~         female 0.637 -0.173  -0.173   -1.094   -1.094
-    ## 137     latent_hcv  ~         edu_12 0.637 -0.122  -0.129   -0.359   -0.359
-    ## 24      latent_wmh ~~          mem_r 0.637  0.100   0.104    0.104    0.104
-    ## 94       logWMH_st ~~    ADNI_MEM_st 0.637  0.077   0.077    1.407    1.407
-    ## 78           mem_r =~      logWMH_st 0.637  0.100   0.100    0.099    0.099
-    ## 80  Hippocampus_st ~~      logWMH_st 0.637 -0.160  -0.160   -1.602   -1.602
-    ## 100    ADNI_MEM_st ~~         ICV_st 0.637 -0.012  -0.012   -0.073   -0.073
-    ## 21           mem_r ~~         ICV_st 0.637 -0.015  -0.015   -0.016   -0.016
-    ## 143     latent_wbv  ~         ICV_st 0.637 -0.492  -0.740   -0.683   -0.683
-    ## 131     latent_hcv  ~  WholeBrain_st 0.637 -0.047  -0.050   -0.050   -0.050
-    ## 107 Hippocampus_st  ~         female 0.637  0.127   0.127    0.062    0.062
-    ## 83  Hippocampus_st ~~         female 0.637  0.023   0.023    0.144    0.144
-    ## 101    ADNI_MEM_st ~~         female 0.637 -0.012  -0.012   -0.143   -0.143
-    ## 25           mem_r ~~         female 0.637 -0.016  -0.016   -0.032   -0.032
-    ## 81  Hippocampus_st ~~    ADNI_MEM_st 0.637  0.087   0.087    1.584    1.584
-    ## 82  Hippocampus_st ~~         ICV_st 0.637  0.068   0.068    0.233    0.233
-    ## 22      latent_hcv ~~          mem_r 0.637  0.113   0.119    0.119    0.119
-    ## 95       logWMH_st ~~         ICV_st 0.637 -0.162  -0.162   -0.555   -0.555
-    ## 23      latent_wbv ~~          mem_r 0.637 -0.140  -0.211   -0.211   -0.211
-    ## 88   WholeBrain_st ~~    ADNI_MEM_st 0.637 -0.108  -0.108   -2.785   -2.785
-    ## 79  Hippocampus_st ~~  WholeBrain_st 0.637  0.218   0.218    3.084    3.084
-    ## 90   WholeBrain_st ~~         female 0.637  0.307   0.307    2.751    2.751
-    ## 128         ICV_st  ~             aa 0.637 -2.136  -2.136   -0.611   -0.611
-    ## 4   Hippocampus_st ~~ Hippocampus_st 0.637 -0.159  -0.100   -0.098   -0.098
-    ## 130     latent_hcv  ~ Hippocampus_st 0.637 -0.173  -0.183   -0.185   -0.185
-    ## 141     latent_wbv  ~  WholeBrain_st 0.637 -0.644  -0.968   -0.969   -0.969
-    ## 109 Hippocampus_st  ~             aa 0.637  1.328   1.328    0.347    0.347
-    ## 85  Hippocampus_st ~~             aa 0.637  0.095   0.095    1.138    1.138
-    ## 27           mem_r ~~             aa 0.637 -0.067  -0.067   -0.255   -0.255
-    ## 103    ADNI_MEM_st ~~             aa 0.637 -0.052  -0.052   -1.131   -1.131
-    ## 10       logWMH_st ~~      logWMH_st 0.637  1.075   0.100    0.098    0.098
-    ## 86  Hippocampus_st ~~           hisp 0.636  1.007   1.007   15.098   15.098
-    ## 196           hisp  ~     latent_wmh 0.633 -0.005  -0.004   -0.021   -0.021
-    ## 161         female  ~  WholeBrain_st 0.629  6.102   6.102   12.237   12.237
-    ## 122         ICV_st  ~    ADNI_MEM_st 0.599 -0.014  -0.014   -0.015   -0.015
-    ## 167         female  ~         edu_12 0.547 -0.042  -0.042   -0.235   -0.235
-    ## 164         female  ~     latent_hcv 0.547  0.175   0.165    0.331    0.331
-    ## 169         female  ~           hisp 0.547  0.030   0.030    0.013    0.013
-    ## 43          female ~~           hisp 0.547  0.001   0.001    0.013    0.013
-    ## 175         edu_12  ~     latent_wbv 0.508  0.323   0.215    0.077    0.077
-    ## 176         edu_12  ~     latent_wmh 0.508 -0.055  -0.052   -0.019   -0.019
-    ## 38      latent_wmh ~~         edu_12 0.508 -0.050  -0.052   -0.019   -0.019
-    ## 155     latent_wmh  ~     latent_wbv 0.508 -0.208  -0.144   -0.144   -0.144
-    ## 77      latent_wbv =~      logWMH_st 0.508 -0.208  -0.138   -0.137   -0.137
-    ## 97       logWMH_st ~~         edu_12 0.507 -0.050  -0.050   -0.057   -0.057
-    ## 192           hisp  ~    ADNI_MEM_st 0.496  0.007   0.007    0.035    0.035
-    ## 99       logWMH_st ~~           hisp 0.467 -0.004  -0.004   -0.053   -0.053
-    ## 40      latent_wmh ~~           hisp 0.466 -0.004  -0.004   -0.017   -0.017
-    ## 157     latent_wmh  ~         edu_12 0.456 -0.006  -0.006   -0.018   -0.018
-    ## 153     latent_wmh  ~         ICV_st 0.452  0.133   0.139    0.128    0.128
-    ## 159     latent_wmh  ~           hisp 0.418 -0.075  -0.078   -0.016   -0.016
-    ## 125         ICV_st  ~     latent_wmh 0.417  0.075   0.072    0.078    0.078
-    ## 123         ICV_st  ~     latent_hcv 0.368 -0.025  -0.024   -0.026   -0.026
-    ## 50          ICV_st ~~           hisp 0.367  0.002   0.002    0.010    0.010
-    ## 120         ICV_st  ~ Hippocampus_st 0.356 -0.026  -0.026   -0.029   -0.029
-    ## 129         ICV_st  ~           hisp 0.353  0.045   0.045    0.010    0.010
-    ## 190           hisp  ~ Hippocampus_st 0.338  0.004   0.004    0.020    0.020
-    ## 172         edu_12  ~    ADNI_MEM_st 0.320  0.143   0.143    0.051    0.051
-    ## 194           hisp  ~     latent_hcv 0.270  0.004   0.004    0.018    0.018
-    ## 170         edu_12  ~ Hippocampus_st 0.257  0.125   0.125    0.045    0.045
-    ## 197           hisp  ~         female 0.215  0.004   0.004    0.010    0.010
-    ## 174         edu_12  ~     latent_hcv 0.206  0.098   0.092    0.033    0.033
-    ## 191           hisp  ~  WholeBrain_st 0.202  0.002   0.002    0.009    0.009
-    ## 124         ICV_st  ~     latent_wbv 0.191 -0.040  -0.027   -0.029   -0.029
-    ## 112  WholeBrain_st  ~    ADNI_MEM_st 0.167 -0.084  -0.084   -0.084   -0.084
-    ## 142     latent_wbv  ~    ADNI_MEM_st 0.167 -0.084  -0.126   -0.126   -0.126
-    ## 121         ICV_st  ~  WholeBrain_st 0.155 -0.036  -0.036   -0.039   -0.039
-    ## 195           hisp  ~     latent_wbv 0.130  0.002   0.002    0.008    0.008
-    ## 193           hisp  ~         ICV_st 0.081  0.001   0.001    0.006    0.006
-    ## 93   WholeBrain_st ~~           hisp 0.075  0.001   0.001    0.017    0.017
-    ## 36      latent_wbv ~~           hisp 0.075  0.001   0.001    0.006    0.006
-    ## 116  WholeBrain_st  ~           hisp 0.075  0.018   0.018    0.004    0.004
-    ## 149     latent_wbv  ~           hisp 0.075  0.018   0.028    0.006    0.006
-    ## 198           hisp  ~         edu_12 0.031 -0.001  -0.001   -0.018   -0.018
-    ## 152     latent_wmh  ~    ADNI_MEM_st 0.019 -0.015  -0.016   -0.015   -0.015
-    ## 177         edu_12  ~         female 0.016  0.081   0.081    0.015    0.015
-    ## 114  WholeBrain_st  ~         edu_12 0.013 -0.011  -0.011   -0.029   -0.029
-    ## 147     latent_wbv  ~         edu_12 0.013 -0.011  -0.016   -0.044   -0.044
-    ## 156     latent_wmh  ~         female 0.012 -0.031  -0.033   -0.016   -0.016
-    ## 173         edu_12  ~         ICV_st 0.006 -0.024  -0.024   -0.008   -0.008
-    ## 151     latent_wmh  ~  WholeBrain_st 0.001  0.003   0.004    0.004    0.004
 
 ## Structural Equation Modeling Approach
 
