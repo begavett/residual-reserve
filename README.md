@@ -3,18 +3,17 @@ Statistical Tools, and Policy Shaping<br><small><em>Residual Cognitive
 Reserve using Cross-Sectional Data</em></small>
 ================
 Brandon Gavett, Ph.D.  
-Department of Neurology, University of California Davis
-
-2025-07-25
+Department of Neurology, University of California Davis  
+date: “2025-07-25”
 
 ## Building a Residual
 
 ### Goal
 
 - To partition variance in a cognitive outcome into three components:
-  - Variance explained by brain
-  - Variance explained by demographics
-  - Residual variance (serves as an estimate of cognitive reserve)
+- Variance explained by brain
+- Variance explained by demographics
+- Residual variance (serves as an estimate of cognitive reserve)
 
 ## Building a Residual
 
@@ -244,6 +243,23 @@ head(adni_syn_resid)
     ## 4    -0.250 -0.2251     -0.1470     -0.838 1.23  -0.900
     ## 5    -0.254  0.0891      0.0589      0.560 1.31  -0.515
     ## 6    -0.703 -0.7278      0.8372      1.205 1.38  -0.230
+
+## Linear Regression Approach
+
+### Visualizing Residual Reserve
+
+``` r
+ggplot(adni_syn_resid, aes(x = fitted(mem_lm), y = ADNI_MEM_st)) +
+  geom_point() +
+  geom_linerange(aes(x = fitted(mem_lm), ymin = fitted(mem_lm), ymax = ADNI_MEM_st, colour = memr_lm)) +
+  scale_colour_viridis_c(name = "Residual", option = "turbo") +
+  geom_smooth(method = "lm", se = FALSE) +
+  theme_bw() +
+  xlab("Predicted ADNI-Mem") +
+  ylab("Observed ADNI-Mem")
+```
+
+![](README_files/figure-gfm/lm%20plot-1.png)<!-- -->
 
 ## Structural Equation Modeling Approach
 
@@ -700,7 +716,7 @@ Hypothesized model:
 ef_memr_sem <- lm(ADNI_EF_st ~ age_70 + edu_12 + female + aa + hisp + 
                     Hippocampus_st + WholeBrain_st + logWMH_st + ICV_st + 
                     FDG * memr_sem, 
-                   data = adni_syn_resid)
+                  data = adni_syn_resid)
 
 summary(ef_memr_sem)
 ```
