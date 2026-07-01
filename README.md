@@ -5,7 +5,7 @@ Reserve using Cross-Sectional Data</em></small>
 Brandon Gavett, Ph.D.  
 Department of Neurology, University of California Davis
 
-2026-07-09
+2026-07-10
 
 ## Building a Residual
 
